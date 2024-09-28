@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+        }
+        img {
+            width: 260px;
+            height: 260px;
+            border-radius: 100%;
+        }
+        .social-icons img {
+            width: 64px;
+            height: 64px;
+            margin: 0 10px;
+        }
+        .date-time {
+            text-align: right;
+            margin: 20px;
+        }
+    </style>
+</head>
+<body onload="displayDateTime()">
+
+    <img src="abdullah.jpg" alt="Profile Picture">
+    <p><b><u>Abdullah</u></b></p>
+    <p><b><u>1202223396</u></b></p>
+    <p><b><u>S1 Sistem Informasi</u></b></p>
+    <p><i>SI-46-04</i></p>
+
+    <div class="social-icons">
+        <a href="https://www.linkedin.com/in/abdullah-hafnizar-a67228312/" target="_blank">
+            <img src="linkeid.png" alt="LinkedIn">
+        </a>
+        <a href="https://www.instagram.com/abdh_47?igsh=MTdydWx4aHRnZnlqMg==" target="_blank">
+            <img src="instagram.png" alt="Instagram">
+        </a>
+        <a href="https://github.com/sukajalan22" target="_blank">
+            <img src="github.png" alt="GitHub">
+        </a>
+    </div>
+
+    <div class="date-time">
+        <h2>Tanggal: <span id="date"></span></h2>
+        <h2>Waktu: <span id="time"></span></h2>
+    </div>
+
+    <script>
+        function displayDateTime() {
+            var now = new Date();
+            var date = now.toLocaleDateString();
+            var time = now.toLocaleTimeString();
+
+            document.getElementById("date").innerHTML = date;
+            document.getElementById("time").innerHTML = time;
+        }
+        setInterval(displayDateTime, 1000);
+    </script>
+
+</body>
+</html>
